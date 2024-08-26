@@ -1,2 +1,3 @@
+#!/usr/bin/python3
 print("Programming is like building a multilingual puzzle")
-# that's enough troubleshooting for toda- WHY DOESN'T MY SELECTED PYTHON INTERPRETER WORK ANYMORE
+# that's enough troubleshooting for today
