@@ -25,7 +25,7 @@ uploaded that you should watch: https://www.youtube.com/watch?v=pyoURHR-g4U ;-)
 
 ---
 
-#### [Click Here For Atlas Low Level Programming C Projects](https://github.com/Zytronium/atlas-low_level_programming/blob/main/README.md#click-here-for-atlas-higher-level-programming-projects)
+#### [Click Here For Atlas Low Level Programming C Projects](https://github.com/Zytronium/atlas-low_level_programming/tree/main?tab=readme-ov-file#atlas-low-level-programming---atlas-school-c-projects)
 
 ---
 ###### <sup><sub>There's something really satisfying about a ReadMe like this one. [**_~~`I love formatting`~~_**.](https://github.com/lifeparticle/Markdown-Cheatsheet?tab=readme-ov-file#introduction)</sub></sup>
