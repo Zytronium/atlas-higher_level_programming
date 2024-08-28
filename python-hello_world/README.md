@@ -1,3 +1,3 @@
 Python - Hello, World
 ---
-###### WIP Readme
+This project is basically getting to know the basics of python printing.
