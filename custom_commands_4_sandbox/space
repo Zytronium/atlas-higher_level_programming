@@ -1,0 +1,3 @@
+#!/bin/env bash
+seq 35 | xargs -Iz echo
+
