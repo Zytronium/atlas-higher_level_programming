@@ -9,8 +9,8 @@ uploaded that you should watch: https://www.youtube.com/watch?v=pyoURHR-g4U ;-)
 # Projects:
 - ### `OP1000`
   - **[Python - Hello, World](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-hello_world)**
-  - ***[Python - if/else, loops, functions](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-if_else_loops_functions)***
-  - [Python - import & modules]()
+  - **[Python - if/else, loops, functions](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-if_else_loops_functions)**
+  - ***[Python - import & modules](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-import_modules)***
   - [Python - Data Structures: Lists, Tuples]()
   - [Python - More Data Structures: Set, Dictionary]()
   - [Python - Exceptions]()
