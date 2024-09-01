@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-def no_c(my_string):
-    return my_string.lstrip('cC')
+def no_c(my_string : str):
+    return my_string.join(char for char in my_string if char != 'c' and char != 'C')
+
+# print(no_c("Best School"))
+# print(no_c("Chicago"))
+# print(no_c("C is fun!"))
