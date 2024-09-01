@@ -25,10 +25,10 @@ Projects are in chronological order, and are separated by courses, but not by sp
 ---
 # Projects:
 - ### `OP1000`
-  - **[Python - Hello, World](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-hello_world)**
-  - **[Python - if/else, loops, functions](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-if_else_loops_functions)**
-  - **[Python - import & modules](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-import_modules)**
-  - ***[Python - Data Structures: Lists, Tuples](https://github.com/Zytronium/atlas-higher_level_programming/tree/master/python-data_structures)***
+  - **[Python - Hello, World](python-hello_world)**
+  - **[Python - if/else, loops, functions](python-if_else_loops_functions)**
+  - **[Python - import & modules](python-import_modules)**
+  - ***[Python - Data Structures: Lists, Tuples](python-data_structures)***
   - *[Python - More Data Structures: Set, Dictionary]()*
   - *[Python - Exceptions]()*
   - *[Python - Classes & Objects]()*
