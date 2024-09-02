@@ -7,22 +7,20 @@ def roman_to_int(roman_string):
         return 0
 
     for numeral in roman_string:
-        match numeral:  # match was introduced in Python 3.10 and we're required to use 3.8 :((((
-            case 'I':
-                doNothing()
-            case 'V':
-                doNothing()
-            case 'X':
-                doNothing()
-            case 'L':
-                doNothing()
-            case 'C':
-                doNothing()
-            case 'D':
-                doNothing()
-            case 'M':
-                doNothing()
-
+        if numeral == 'I':
+            doNothing()
+        elif numeral == 'V':
+            doNothing()
+        elif numeral == 'X':
+            doNothing()
+        elif numeral == 'L':
+            doNothing()
+        elif numeral == 'C':
+            doNothing()
+        elif numeral == 'D':
+            doNothing()
+        elif numeral == 'M':
+            doNothing()
 
 
 roman_number = 82.5
