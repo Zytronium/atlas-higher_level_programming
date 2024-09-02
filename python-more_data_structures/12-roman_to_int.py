@@ -4,24 +4,28 @@ def doNothing():
 
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
+        print("Not a string")
         return 0
 
-    for numeral in roman_string:
-        if numeral == 'I':
-            doNothing()
-        elif numeral == 'V':
-            doNothing()
-        elif numeral == 'X':
-            doNothing()
-        elif numeral == 'L':
-            doNothing()
-        elif numeral == 'C':
-            doNothing()
-        elif numeral == 'D':
-            doNothing()
-        elif numeral == 'M':
-            doNothing()
+    roman_numerals = {
+        'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000
+    }
 
+    previous_number = 0
+    value = 0
+    for numeral in roman_string:
+        print(numeral)
+        if numeral in roman_numerals:
+            current_number = roman_numerals[numeral]
+            if current_number < previous_number:
+                value -= previous_number
+            else:
+                value += previous_number
+        else:
+            print("Not a valid roman numeral")
+            return 0
+
+    return value
 
 roman_number = 82.5
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
