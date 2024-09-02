@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-def doNothing():
-    return
+def todo(print_msg = True):
+    if print_msg:
+        print("WARNING: WIP CODE REACHED")
 
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
@@ -14,13 +15,15 @@ def roman_to_int(roman_string):
     previous_number = 0
     value = 0
     for numeral in roman_string:
-        print(numeral)
+        # print(numeral, roman_numerals[numeral])
         if numeral in roman_numerals:
             current_number = roman_numerals[numeral]
-            if current_number < previous_number:
-                value -= previous_number
-            else:
+            if current_number > previous_number:
                 value += previous_number
+            else:
+                todo(print_msg=False)
+                # make note to subtract on next iteration
+            previous_number = current_number
         else:
             print("Not a valid roman numeral")
             return 0
