@@ -30,7 +30,7 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Python - import & modules](python-import_modules)**
   - **[Python - Data Structures: Lists, Tuples](python-data_structures)**
   - **[Python - More Data Structures: Set, Dictionary](python-more_data_structures)**
-  - ***[Python - Exceptions](python-exceptions)***
+  - **[Python - Exceptions](python-exceptions)**
   - *[Python - Classes & Objects]()*
   - *[Python - Test Driven development]()*
   - *[Python - More Classes & Objects]()*
