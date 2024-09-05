@@ -11,3 +11,4 @@ class Square:
         empty init method
         """
         pass
+
