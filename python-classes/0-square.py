@@ -4,6 +4,8 @@
 """
 0-square is an empty class
 """
+
+
 class Square:
     """
     just a square with no attributes
