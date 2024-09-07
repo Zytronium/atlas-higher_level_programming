@@ -14,7 +14,7 @@ class Square:
         :param size: the size of the square. Must be a non-negative integer
         """
         self.__size = size
-        if type(size) != int:
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         if self.__size < 0:
             raise ValueError("size must be >= 0")
