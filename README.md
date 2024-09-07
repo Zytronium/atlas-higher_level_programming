@@ -31,7 +31,7 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Python - Data Structures: Lists, Tuples](python-data_structures)**
   - **[Python - More Data Structures: Set, Dictionary](python-more_data_structures)**
   - **[Python - Exceptions](python-exceptions)**
-  - ***[Python - Classes & Objects](python-classes)***
+  - **[Python - Classes & Objects](python-classes)**
   - *[Python - Test Driven development]()*
   - *[Python - More Classes & Objects]()*
 - ### `OP1100`

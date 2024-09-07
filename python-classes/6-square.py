@@ -6,12 +6,16 @@ task 6
 
 class Square:
     """
-    # a square
+    a square
+    its dimensions are size*size characters
+    when position is (x, y), the square is printed offset by x characters
+    to the right, and y characters down.
     """
     def __init__(self, size=0, position=(0, 0)):
         """
         init method
         :param size: the size of the square. Must be a non-negative integer
+        :param position: the (x, y) position of the square. Must be a tuple.
         """
         self.__size = size
         self.__position = position
@@ -35,8 +39,9 @@ class Square:
         """
         prints the square using the '#' character
         """
+        print("\n" * self.__position[1], end='')
         for i in range(self.__size):
-            print("#" * self.__size)
+            print(" " * self.__position[0] + "#" * self.__size)
         if self.__size == 0:
             print()  # still print something if size is 0
 
