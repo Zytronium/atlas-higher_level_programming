@@ -15,7 +15,8 @@ class Square:
         """
         init method
         :param size: the size of the square. Must be a non-negative integer
-        :param position: the (x, y) position of the square. Must be a tuple.
+        :param position: the (x, y) position of the square. Must be a tuple of
+        2 positive integers.
         """
         self.__size = size
         self.__position = position
@@ -25,7 +26,8 @@ class Square:
         if self.__size < 0:
             raise ValueError("size must be >= 0")
 
-        if type(position) is not tuple or len(position) != 2:
+        if (type(position) is not tuple or len(position) != 2
+                or position[0] < 0 or position[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
@@ -79,6 +81,7 @@ class Square:
         sets the new position of the square
         :param value: the new position of the square
         """
-        if type(value) is not tuple or len(value) != 2:
+        if (type(value) is not tuple or len(value) != 2
+                or value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
