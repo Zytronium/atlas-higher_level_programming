@@ -21,15 +21,22 @@ def matrix_divided(matrix, div):
         matrix_width = len(matrix[0])
         for item in matrix:
             if not isinstance(item, list):
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError(
+                    'matrix must be a matrix (list of lists) of integers/'
+                'floats')
+
             if len(item) != matrix_width:
-                raise TypeError('Each row of the matrix must have the same size')
+                raise TypeError(
+                    'Each row of the matrix must have the same size')
             for num in item:
                 if not isinstance(num, int) and not isinstance(num, float):
-                    raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                    raise TypeError(
+                        'matrix must be a matrix (list of lists) of integers/'
+                        'floats')
 
     else:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(
+            'matrix must be a matrix (list of lists) of integers/floats')
 
     for row in matrix:
         new_row = []
