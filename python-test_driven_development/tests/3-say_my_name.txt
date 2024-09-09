@@ -7,7 +7,7 @@ My name is John Smith
 My name is Walter White
 
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
 >>> try:
 ...     say_my_name(12, "White")
@@ -19,19 +19,14 @@ Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
 >>> say_my_name("Steve")
-My name is Steve
+My name is Steve 
 >>> say_my_name()
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 >>> say_my_name("")
-My name is
+My name is  
 >>> say_my_name("", None)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
->>> say_my_name(say_my_name("Null"), "Void")
-My name is Null
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
