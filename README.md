@@ -35,6 +35,10 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - ***[Python - Test Driven development](python-test_driven_development)***
   - *[Python - More Classes & Objects]()*
 - ### `OP1100`
+  - *[Python - Everything is object]()*
+  - *[Python - Inheritance]()*
+  - *[Python - Input/Output]()*
+  - *[Python - Almost a circle]()*
 - ### `WD1000`
 - ### `SA1000`
 - ### `WD1100`
