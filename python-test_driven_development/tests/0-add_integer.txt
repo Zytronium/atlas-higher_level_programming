@@ -1,1 +1,12 @@
-What are we even supposed to put in here...
+"""
+    This module, from task 0, contains a function that adds 2 integers.
+"""
+
+"""
+Adds integers a and b and returns the result
+:param a: first integer
+:param b: second integer. B = 98 if not specified
+:return: the sum of a + b
+"""
+
+from 0-add_integer import add_integer
