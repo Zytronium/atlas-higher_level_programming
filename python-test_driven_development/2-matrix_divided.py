@@ -23,7 +23,7 @@ def matrix_divided(matrix, div):
             if not isinstance(item, list):
                 raise TypeError(
                     'matrix must be a matrix (list of lists) of integers/'
-                'floats')
+                    'floats')
 
             if len(item) != matrix_width:
                 raise TypeError(
