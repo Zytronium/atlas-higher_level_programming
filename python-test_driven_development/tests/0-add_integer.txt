@@ -10,6 +10,16 @@ Adds integers a and b and returns the result
 """
 
 >>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1523641836571265489179835471398811231234123123511346134612451251235132513452136666666666666666666666666666666665555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555554444444444444444444444444444444444444444444444444444441345253125446255666666666666666655555555555555555555555345.5)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(int("1"), 7)
+8
 >>> add_integer(1,2)
 3
 >>> add_integer(100, -2)
