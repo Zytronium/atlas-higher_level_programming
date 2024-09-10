@@ -3,7 +3,14 @@
     This module, from task 4, contains a function that prints a text with 2
     new lines after each period(.), comma(,), question mark(?), and colon(:).
 """
-def text_indentation(text):
+
+
+def text_indentation(text: str):
+    """
+    prints a text with 2 new lines after each period(.), comma(,),
+    question mark(?), and colon(:).
+    :param text: the text to be modified and printed
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
     
