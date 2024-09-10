@@ -13,10 +13,11 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    
+
     new_text_lines = text.replace(".", ".\n").replace(",", ",\n").replace(
         "?", "?\n").replace(":", ":\n").split("\n")
     new_text = ""
+
     for line in new_text_lines:
         new_text += line.strip()
         if line is not new_text_lines[-1]:
@@ -24,8 +25,7 @@ def text_indentation(text):
     print(new_text, end='')
 
 if __name__ == "__main__":
-    text_indentation(
-        "Never gonna. Give, you: up? Never .  Gonna let you,,, down. . .?")
+    text_indentation("Never gonna. Give, you: up? Never .  Gonna let you,,, down. . .?")
     print("\n----------------\n")
     text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
