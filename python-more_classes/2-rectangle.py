@@ -60,7 +60,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    @property
     def area(self):
         """
         calculates the area of the rectangle
@@ -68,7 +67,6 @@ class Rectangle:
         """
         return self.__width * self.__height
     
-    @property
     def perimeter(self):
         """
         calculates the perimeter of the rectangle
