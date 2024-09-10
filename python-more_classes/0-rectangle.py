@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module for a rectangle class
+"""
 class Rectangle:
-    def __init__(self, width, height):
-        pass
+    """An empty class for a rectangle
+    """
