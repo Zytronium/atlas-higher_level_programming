@@ -1,0 +1,40 @@
+>>> ps = __import__('4-print_square').print_square
+>>> ps(4)
+####
+####
+####
+####
+>>> ps(-1.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> ps(2.0)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> ps(0)
+>>> ps(1)
+#
+>>> ps(-4)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+>>> ps(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+>>> ps("5")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> ps(float('inf'))
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
