@@ -5,7 +5,7 @@
 """
 
 
-def text_indentation(text: str):
+def text_indentation(text):
     """
     prints a text with 2 new lines after each period(.), comma(,),
     question mark(?), and colon(:).
@@ -21,7 +21,7 @@ def text_indentation(text: str):
         new_text += line.strip()
         if line is not new_text_lines[-1]:
             new_text += "\n\n"
-    print(new_text)
+    print(new_text, end='')
 
 if __name__ == "__main__":
     text_indentation(
