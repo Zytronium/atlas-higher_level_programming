@@ -72,4 +72,5 @@ class Rectangle:
         calculates the perimeter of the rectangle
         :return: the perimeter of the rectangle
         """
-        return 2 * (self.__width + self.__height) if self.height != 0 and self.width != 0 else 0
+        return 2 * (self.__width + self.__height) if \
+            self.__height != 0 and self.__width != 0 else 0
