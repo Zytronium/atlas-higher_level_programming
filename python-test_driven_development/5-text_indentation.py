@@ -14,15 +14,14 @@ def text_indentation(text: str):
     if type(text) is not str:
         raise TypeError("text must be a string")
     
-    new_text_lines = text.replace(".", ".\n\n").replace(",", ",\n\n").replace(
-        "?", "?\n\n").replace(":", ":\n\n").split("\n")
+    new_text_lines = text.replace(".", ".\n").replace(",", ",\n").replace(
+        "?", "?\n").replace(":", ":\n").split("\n")
     new_text = ""
     for line in new_text_lines:
         new_text += line.strip()
         if line is not new_text_lines[-1]:
-            new_text += "\n"
+            new_text += "\n\n"
     print(new_text)
-
 
 if __name__ == "__main__":
     text_indentation(
