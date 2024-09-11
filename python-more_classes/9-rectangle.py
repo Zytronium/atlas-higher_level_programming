@@ -92,6 +92,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height) if \
             self.__height != 0 and self.__width != 0 else 0
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
         calculates the largest rectangle of the two given rectangles.
@@ -108,6 +109,7 @@ class Rectangle:
 
         return rect_1 if rect_1.area() >= rect_2.area() else rect_2
 
+    @classmethod
     def square(cls, size=0):
         """
         returns a new Rectangle instance with width == height == size
