@@ -21,7 +21,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
 
     def __str__(self):
-        return (('#' * self.__width + '\n') * self.__height).removesuffix('\n')
+        return "" if self.__width == 0 or self.__height == 0 else \
+            (('#' * self.__width + '\n') * self.__height).removesuffix('\n')
 
     @property
     def width(self):
