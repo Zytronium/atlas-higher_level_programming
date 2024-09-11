@@ -26,8 +26,9 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        return "" if self.__width == 0 or self.__height == 0 else \
-            ((str(self.print_symbol) * self.__width + '\n') * self.__height).removesuffix('\n')
+        return "" if self.__width == 0 or self.__height == 0 else ((str(
+            self.print_symbol) * self.__width + '\n'
+            ) * self.__height).removesuffix('\n')
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
