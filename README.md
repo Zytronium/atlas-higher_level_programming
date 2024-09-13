@@ -33,9 +33,9 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Python - Exceptions](python-exceptions)**
   - **[Python - Classes & Objects](python-classes)**
   - **[Python - Test Driven development](python-test_driven_development)**
-  - ***[Python - More Classes & Objects](python-more_classes)***
+  - **[Python - More Classes & Objects](python-more_classes)**
 - ### `OP1100`
-  - *[Python - Everything is object]()*
+  - ***[Python - Everything is object]()***
   - *[Python - Inheritance]()*
   - *[Python - Input/Output]()*
   - *[Python - Almost a circle]()*
