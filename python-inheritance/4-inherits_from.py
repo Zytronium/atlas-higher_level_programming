@@ -2,6 +2,8 @@
 """
     task 4
 """
+
+
 def inherits_from(obj, a_class):
     """
     checks if the given object inherits the given class directly or indirectly
