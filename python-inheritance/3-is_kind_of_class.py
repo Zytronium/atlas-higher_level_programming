@@ -13,12 +13,4 @@ def is_kind_of_class(obj, a_class):
     :return: True if the object is exactly an instance of the specified class
     or a subclass of it; otherwise False
     """
-    while a_class.issubclass():
-        if isinstance(obj, a_class):
-            return True
-        else:
-            a_class = a_class.getSuperClass()
-    if isinstance(obj, a_class):
-        return True
-    else:
-        return False
+    return isinstance(obj, a_class)
