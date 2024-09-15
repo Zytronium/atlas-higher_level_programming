@@ -24,3 +24,6 @@ class Square(Rectangle):
         :return: the area of the square
         """
         return self.__size * self.__size
+
+    def __str__(self):
+        return f"[Square] {self.__size}/{self.__size}"
