@@ -28,7 +28,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    a rectangle
+    a rectangle, which is a subclass of BaseGeometry
     """
     def __init__(self, width, height):
         self.__width = width
@@ -47,6 +47,9 @@ class Rectangle(BaseGeometry):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
 class Square(Rectangle):
+    """
+    a square, which is a subclass of Rectangle
+    """
     def __init__(self, size):
         self.__size = size
         super().integer_validator("size", self.__size)
