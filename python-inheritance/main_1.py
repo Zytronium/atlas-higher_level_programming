@@ -3,5 +3,4 @@ Rectangle = __import__('8-rectangle').Rectangle
 BaseGeometry = __import__('8-rectangle').BaseGeometry
 
 print(issubclass(Rectangle, BaseGeometry))
-
-r = Rectangle(5, 4)
+print(f"{Rectangle.__name__} is a subclass of {Rectangle.__bases__[0].__name__}")
