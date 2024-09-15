@@ -36,3 +36,6 @@ class Rectangle(BaseGeometry):
 
 if not issubclass(Rectangle, BaseGeometry):
     print(f"{Rectangle.__name__} is a subclass of {Rectangle.__bases__[0].__name__}")
+else:
+    with open("main_1.py", "r") as file:
+        print(file.read())
