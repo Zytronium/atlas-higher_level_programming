@@ -33,9 +33,3 @@ class Rectangle(BaseGeometry):
         self.__height = height
         super().integer_validator("width", self.__width)
         super().integer_validator("height", self.__height)
-
-if not issubclass(Rectangle, BaseGeometry):
-    print(f"{Rectangle.__name__} is a subclass of {Rectangle.__bases__[0].__name__}")
-else:
-    with open("main_1.py", "r") as file:
-        print(file.read())
