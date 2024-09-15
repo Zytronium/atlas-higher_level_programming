@@ -36,7 +36,7 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Python - More Classes & Objects](python-more_classes)**
 - ### `OP1100`
   - ***[Python - Everything is object]()*** *Essay question is not done, nor will it be in the repo (most likely)
-  - ***[Python - Inheritance](python-inheritance)***
+  - **[Python - Inheritance](python-inheritance)**
   - *[Python - Input/Output]()*
   - *[Python - Almost a circle]()*
 - ### `WD1000`
