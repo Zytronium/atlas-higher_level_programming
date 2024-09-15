@@ -1,28 +1,33 @@
-# Python - Project Name
+# Python - Inheritance
 
 ---
-###### Project Readme Template
-This project is all about something.
+This project is all about inheritance.
 
-###### Description and example of concepts in this project 
+Inheritance is basically where a class is a subclass of another class.
+For example, if I recall correctly, in the high-level language, Kotlin, a Number is
+a type or class which has several subclasses, such as integer, double, or float.
+Another Kotlin example would be an IndexOutOfBoundsException, which is a subclass of
+RuntimeException, which is a subclass of Exception, which is a subclass of Throwable.
+A Python example would be a TypeError is a subclass of Exception, which is a
+subclass of BaseException, which is a subclass of object. Similarly, bool is a
+subclasses of int, which is a subclass of object.
 
-[//]: # (TODO: Do the readme)
-Example code:
-```python
-class ToyotaCamry07:
-    # (public) class attributes
-    manufacturer = "Toyota"
-    model_name = "Camry"
-    make_year = 2007
-    def __init__(self, vin, color, owner, fuel = 100.0, engine_mods = None, destination = None):
-        # instance attributes
-        self.__vin = vin
-        self.color = color
-        self._owner = owner
-        self._fuel = fuel  # percent of full tank, NOT gallons
-        self._engine_mods = engine_mods
-        self.__destination = destination
+The same goes for custom classes. You can make a class called BaseGeometry, and
+then make a subclass called Rectangle, and then another subclass of that called
+Square. Here is a relatively bare-bones example of how you would do this:
 
-    # it would be a good idea to specify the types and/or raise exceptions to enforce types
-    # property getters and setters would also be a good idea
+```Python
+class BaseGeometry:
+    pass
+
+class Rectangle(BaseGeometry):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+class Square(Rectangle):
+    def __init__(self, size):
+        super().__init__(width=size, height=size)
+        self.size = size
+
 ```
