@@ -2,6 +2,8 @@
 """
 module for task 0 which reads a file and prints its contents
 """
+
+
 def read_file(filename=""):
     """
     reads a text file (UTF8) and prints it
