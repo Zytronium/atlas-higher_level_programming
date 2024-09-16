@@ -35,9 +35,9 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Python - Test Driven development](python-test_driven_development)**
   - **[Python - More Classes & Objects](python-more_classes)**
 - ### `OP1100`
-  - ***[Python - Everything is object]()*** *Essay question is not done, nor will it be in the repo (most likely)
+  - **[Python - Everything is object]()** *Essay question is not in the repo
   - **[Python - Inheritance](python-inheritance)**
-  - *[Python - Input/Output]()*
+  - ***[Python - Input/Output](python-input_output)***
   - *[Python - Almost a circle]()*
 - ### `WD1000`
 - ### `SA1000`
