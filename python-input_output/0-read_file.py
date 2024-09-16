@@ -7,7 +7,5 @@ def read_file(filename=""):
     reads a text file (UTF8) and prints it
     :param filename: the name of file
     """
-    f = open(filename)  # todo: handle exception?
-    contents = f.read()  # todo: handle exception?
-    print(contents)
-    f.close()
+    with open(filename, "r", encoding="utf-8") as f:
+        print(f.read())
