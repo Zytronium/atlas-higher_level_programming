@@ -14,9 +14,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
-
     def to_json(self):
         """
         returns a json representation of itself
