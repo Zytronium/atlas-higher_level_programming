@@ -13,7 +13,7 @@ if __name__ == '__main__':
         my_list = load_json(file_name)
     except FileNotFoundError:
         my_list = []
-    if len(argv) != 0:
-        for item in argv:
-            my_list.append(item)
+    if len(argv) != 1:
+        for i in range(1, len(argv)):
+            my_list.append(argv[i])
         save_json(my_list, file_name)
