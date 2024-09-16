@@ -8,4 +8,4 @@ def read_file(filename=""):
     :param filename: the name of file
     """
     with open(filename, "r", encoding="utf-8") as f:
-        print(f.read())
+        print(f.read(), end="")
