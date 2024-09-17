@@ -22,6 +22,7 @@ def pascal_triangle(n: int):
 
     return pascal
 
+
 def print_triangle(triangle):
     """
     Print the triangle
