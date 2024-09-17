@@ -15,9 +15,20 @@ def pascal_triangle(n: int):
         row = [1]  # start with 1 by default
 
         if i >= 1:
-            for j in range(i):
+            for j in range(1, i):
                 row.append(pascal[i - 1][j - 1] + pascal[i - 1][j])
             row.append(1)
         pascal.append(row)
 
     return pascal
+
+def print_triangle(triangle):
+    """
+    Print the triangle
+    """
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])).center(144))
+
+
+if __name__ == "__main__":
+    print_triangle(pascal_triangle(5))
