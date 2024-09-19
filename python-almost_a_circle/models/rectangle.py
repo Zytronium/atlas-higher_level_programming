@@ -115,7 +115,11 @@ class Rectangle(Base):
         """
         displays the rectangle by printing it to stdout
         """
-        print(("#" * self.__width + '\n') * self.__height, end='')
+        top_space = '\n' * self.__y
+        left_space = ' ' * self.__x
+        row = "#" * self.__width + '\n'
+        print(top_space, end='')
+        print((left_space + row) * self.__height, end='')
 
 
 if __name__ == "__main__":
