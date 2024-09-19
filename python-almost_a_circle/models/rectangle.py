@@ -5,7 +5,6 @@ a module containing a rectangle class
 from base import Base
 
 
-
 class Rectangle(Base):
     """
     a class representing a rectangle.
