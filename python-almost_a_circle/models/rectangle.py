@@ -3,9 +3,9 @@
 a module containing a rectangle class
 """
 try:
-    from base import Base
-except ModuleNotFoundError:
     from models.base import Base
+except ModuleNotFoundError:
+    from base import Base
 
 
 class Rectangle(Base):
