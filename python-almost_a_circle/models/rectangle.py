@@ -100,6 +100,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
+
 if __name__ == "__main__":
     r = Rectangle(100, 100, 0, 0)
     print(r.width)
