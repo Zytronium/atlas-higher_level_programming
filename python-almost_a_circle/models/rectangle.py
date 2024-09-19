@@ -2,7 +2,10 @@
 """
 a module containing a rectangle class
 """
-from base import Base
+try:
+    from base import Base
+except ModuleNotFoundError:
+    from models.base import Base
 
 
 class Rectangle(Base):
