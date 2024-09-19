@@ -107,6 +107,7 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
+
 if __name__ == "__main__":
     r = Rectangle(100.4, 100, 0, 0)
     print(r.width)
