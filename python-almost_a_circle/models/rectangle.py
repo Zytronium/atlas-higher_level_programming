@@ -100,7 +100,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
-    @property
     def area(self):
         """
         calculates the area of the rectangle
