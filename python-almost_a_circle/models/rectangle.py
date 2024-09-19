@@ -132,11 +132,14 @@ class Rectangle(Base):
         5th argument: y
         :param args: no-keyword argument containing the arguments to update the shape with
         """
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+                pass
 
 
 if __name__ == "__main__":
