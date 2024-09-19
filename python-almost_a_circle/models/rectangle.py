@@ -107,7 +107,14 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
+    def display(self):
+        """
+        displays the rectangle by printing it to stdout
+        """
+        print(("#" * self.__width + '\n') * self.__height)
+
 
 if __name__ == "__main__":
-    r = Rectangle(100.4, 100, 0, 0)
+    r = Rectangle(10, 4, 0, 0)
     print(r.width)
+    r.display()
