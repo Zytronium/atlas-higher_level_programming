@@ -155,14 +155,16 @@ class Rectangle(Base):
             except IndexError:
                 pass
         else:
-            try:
+            if kwargs.__contains__('id'):
                 self.id = kwargs.get('id')
+            if kwargs.__contains__('width'):
                 self.__width = kwargs['width']
+            if kwargs.__contains__('height'):
                 self.height = kwargs['height']
+            if kwargs.__contains__('x'):
                 self.x = kwargs['x']
+            if kwargs.__contains__('y'):
                 self.y = kwargs['y']
-            except KeyError:
-                pass
 
 
 if __name__ == "__main__":
