@@ -121,26 +121,48 @@ class Rectangle(Base):
         print(top_space, end='')
         print((left_space + row) * self.__height, end='')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        updates the shape with specified args by assigning each given argument
-        to the associated attribute. Args should be given in this order:
+        updates the shape with specified args by assigning each given
+        key/value argument to the associated attribute.
+        Either args or kwargs must be given.
+        kwargs can be a dictionary in any order, but must contain the keys
+        "id", "width", "height", "x", and "y".
+        args should be given in this order:
+
         1st argument: id
+
         2nd argument: width
+
         3rd argument: height
+
         4th argument: x
+
         5th argument: y
-        :param args: no-keyword argument containing the arguments to
-        update the shape with
+
+        :param args: no-keyword argument containing the arguments
+        to update the shape with
+        :param kwargs: key-worded argument containing the arguments
+        to update the shape with
         """
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        except IndexError:
-            pass
+        if args is not None:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
+        else:
+            try:
+                self.id = kwargs['id']
+                self.width = kwargs['width']
+                self.height = kwargs['height']
+                self.x = kwargs['x']
+                self.y = kwargs['y']
+            except KeyError:
+                pass
 
 
 if __name__ == "__main__":
