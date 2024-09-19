@@ -145,7 +145,7 @@ class Rectangle(Base):
         :param kwargs: key-worded argument containing the arguments
         to update the shape with
         """
-        if args is not None:
+        if args is not None and len(args) > 0:
             try:
                 self.id = args[0]
                 self.width = args[1]
@@ -156,9 +156,9 @@ class Rectangle(Base):
                 pass
         else:
             if kwargs.__contains__('id'):
-                self.id = kwargs['id']
+                self.id = kwargs.get('id')
             if kwargs.__contains__('width'):
-                self.width = kwargs['width']
+                self.__width = kwargs['width']
             if kwargs.__contains__('height'):
                 self.height = kwargs['height']
             if kwargs.__contains__('x'):
@@ -169,5 +169,7 @@ class Rectangle(Base):
 
 if __name__ == "__main__":
     r = Rectangle(10, 4, 0, 0)
-    print(r.width)
-    r.display()
+    print(r.id, r.width)
+    r.update(id=5, width=12, hawiuhdiufha=53, height=10)
+    print(r.id, r.width)
+
