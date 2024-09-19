@@ -121,6 +121,23 @@ class Rectangle(Base):
         print(top_space, end='')
         print((left_space + row) * self.__height, end='')
 
+    def update(self, *args):
+        """
+        updates the shape with specified args by assigning each given argument
+        to the associated attribute. Args should be given in this order:
+        1st argument: id
+        2nd argument: width
+        3rd argument: height
+        4th argument: x
+        5th argument: y
+        :param args: no-keyword argument containing the arguments to update the shape with
+        """
+        self.id = args[0]
+        self.width = args[1]
+        self.height = args[2]
+        self.x = args[3]
+        self.y = args[4]
+
 
 if __name__ == "__main__":
     r = Rectangle(10, 4, 0, 0)
