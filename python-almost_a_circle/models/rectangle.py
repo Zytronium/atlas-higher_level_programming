@@ -172,4 +172,3 @@ if __name__ == "__main__":
     print(r.id, r.width)
     r.update(id=5, width=12, hawiuhdiufha=53, height=10)
     print(r.id, r.width)
-
