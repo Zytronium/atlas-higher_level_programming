@@ -18,3 +18,15 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+if __name__ == '__main__':
+    b = Base()
+    print(b.id)
+    b2 = Base()
+    print(b2.id)
+    b2.id = 3
+    print(b2.id)
+    b3 = Base()
+    print(b3.id)
+    b4 = Base(12)
+    print(b4.id)
