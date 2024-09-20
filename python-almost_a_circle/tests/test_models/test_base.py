@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"""
+unittests for models/base
+"""
+
+
 import unittest
 try:
     from models.base import Base
 except ModuleNotFoundError:
     from base import Base
-
 
 class MyTestCase(unittest.TestCase):
     def test_auto_assigning_id(self):
