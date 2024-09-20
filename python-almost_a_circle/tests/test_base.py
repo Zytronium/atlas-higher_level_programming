@@ -40,7 +40,7 @@ class BaseTestCase(unittest.TestCase):
         self.assertTrue(True)
         self.assertEqual(2 + 2, 4)
         new_base = Base()
-        print(new_base.id)
+        # print(new_base.id)
         self.assertEqual(new_base.id, 1)
 
 
