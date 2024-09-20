@@ -13,3 +13,4 @@ class MyTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    MyTestCase().test_auto_assigning_id()
