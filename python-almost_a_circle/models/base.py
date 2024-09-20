@@ -13,14 +13,17 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        self.__initialIdGiven = False
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
+            self.__initialIdGiven = True
             self.id = Base.__nb_objects
 
     def __del__(self):
-        Base.__nb_objects -= 1
+        if self.__initialIdGiven:
+            Base.__nb_objects -= 1
 
 if __name__ == '__main__':
     b = Base()
