@@ -3,6 +3,7 @@
 import unittest
 from models.base import Base
 
+
 class MyTestCase(unittest.TestCase):
     def test_auto_assigning_id(self):
         b = Base()
