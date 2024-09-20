@@ -20,6 +20,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(b2.id, 3)
         b3 = Base()
         self.assertEqual(b3.id, 3)
+        b4 = Base(12)
+        self.assertEqual(b4.id, 12)
 
 
 if __name__ == '__main__':
