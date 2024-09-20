@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-# __path__ = ['/home/SmartFridge/PycharmProjects/atlas-higher_level_programming/python-almost_a_circle/']
 import unittest
-from models.base import Base
+try:
+    from models.base import Base
+except ModuleNotFoundError:
+    from base import Base
 
 
 class MyTestCase(unittest.TestCase):
@@ -18,4 +20,3 @@ class MyTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    MyTestCase().test_auto_assigning_id()
