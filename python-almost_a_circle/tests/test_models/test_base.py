@@ -10,6 +10,10 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(b.id, 1)  # add assertion here
         b2 = Base()
         self.assertEqual(b2.id, 2)
+        b2.id = 3
+        self.assertEqual(b2.id, 3)
+        b3 = Base()
+        self.assertEqual(b3.id, 3)
 
 
 if __name__ == '__main__':
