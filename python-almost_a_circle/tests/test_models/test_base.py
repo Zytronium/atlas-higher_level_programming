@@ -10,7 +10,7 @@ try:
 except ModuleNotFoundError:
     from base import Base
 
-class MyTestCase(unittest.TestCase):
+class BaseTestCase(unittest.TestCase):
     def test_auto_assigning_id(self):
         b = Base()
         self.assertEqual(b.id, 1)
