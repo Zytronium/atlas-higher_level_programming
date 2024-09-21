@@ -76,5 +76,3 @@ class Square(Rectangle):
                 self.x = kwargs['x']
             if kwargs.__contains__('y'):
                 self.y = kwargs['y']
-
-
