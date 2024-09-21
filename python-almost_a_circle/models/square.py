@@ -30,4 +30,3 @@ class Square(Rectangle):
     def size(self, size):
         self.width = size
         self.height = size
-        self.size = size
