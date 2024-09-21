@@ -16,10 +16,4 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__height}"
-
-if __name__ == '__main__':
-    s = Square(1, id=10)
-    print(s.id)
-    s.id += 20
-    print(s.id)
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
