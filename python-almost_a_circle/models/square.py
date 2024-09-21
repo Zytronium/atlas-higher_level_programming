@@ -26,7 +26,7 @@ class Square(Rectangle):
         gets the size of the square
         :return: the size of the square
         """
-        return self.size
+        return self.width
 
     @size.setter
     def size(self, size):
