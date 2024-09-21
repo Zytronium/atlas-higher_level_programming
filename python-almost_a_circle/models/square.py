@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+"""
+module containing a square shape inherited form Rectangle
+"""
+try:
+    from models.rectangle import Rectangle
+except ModuleNotFoundError:
+    from rectangle import Rectangle
+
+
+class Square(Rectangle):
+    """
+    A shape representing a square
+    """
+    def __init__(self, size, x=0, y=0, id=None):
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        return f"[Square] ({self.id}) {self.__x}/{self.__y} - {self.__height}"
+
+if __name__ == '__main__':
+    s = Square(1, id=10)
+    print(s.id)
+    s.id += 20
+    print(s.id)
