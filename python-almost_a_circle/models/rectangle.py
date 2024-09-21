@@ -140,6 +140,8 @@ class Rectangle(Base):
 
         5th argument: y
 
+        note that id is first instead of last, unlike when initializing
+
         :param args: no-keyword argument containing the arguments
         to update the shape with
         :param kwargs: key-worded argument containing the arguments
@@ -158,7 +160,7 @@ class Rectangle(Base):
             if kwargs.__contains__('id'):
                 self.id = kwargs.get('id')
             if kwargs.__contains__('width'):
-                self.__width = kwargs['width']
+                self.width = kwargs['width']
             if kwargs.__contains__('height'):
                 self.height = kwargs['height']
             if kwargs.__contains__('x'):
