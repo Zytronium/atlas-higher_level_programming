@@ -1,6 +1,4 @@
-import unittest
-from encodings.punycode import selective_len
-
+#!/usr/bin/python3
 """
 unittests for models/base
 """
