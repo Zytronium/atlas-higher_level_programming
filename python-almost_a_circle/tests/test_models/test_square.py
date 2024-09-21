@@ -11,6 +11,16 @@ except ModuleNotFoundError:
     from square import Square
 
 class SquareTestCase(unittest.TestCase):
+    def test_0is_size(self):
+        expected_error = ValueError("width must be > 0")
+        raised_error = None
+        try:
+            square = Square(0)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
     def test_1auto_assign_id(self):
         s = Square(5)
         s2 = Square(5)
@@ -40,6 +50,73 @@ class SquareTestCase(unittest.TestCase):
         # 'width' shouldn't update anything
         self.assertEqual(str(s), "[Square] (35) 4/3 - 6")
         self.assertEqual(s.width, 6)
+
+    def test_6negative_size(self):
+        expected_error = ValueError("width must be > 0")
+        raised_error = None
+        try:
+            square = Square(-15)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
+    def test_7negative_position(self):
+        expected_error = ValueError("x must be >= 0")
+        raised_error = None
+        try:
+            square = Square(100, -2, -5)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
+        expected_error = ValueError("y must be >= 0")
+        raised_error = None
+        try:
+            square = Square(100, 3, -5)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
+        expected_error = None
+        raised_error = None
+        try:
+            square = Square(100, 0, 0)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
+    def test_8not_integers(self):
+        expected_error = TypeError("width must be an integer")
+        raised_error = None
+        try:
+            square = Square(5.5)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
+        expected_error = TypeError("x must be an integer")
+        raised_error = None
+        try:
+            square = Square(14, 3.5, 6.2)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
+        expected_error = TypeError("y must be an integer")
+        raised_error = None
+        try:
+            square = Square(14, 4   , False)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
 
 
 if __name__ == '__main__':
