@@ -3,9 +3,6 @@
 module containing the base class for all objects in this project
 """
 import json
-from models.rectangle import Rectangle
-from models.square import Square
-
 
 
 class Base:
@@ -69,12 +66,12 @@ class Base:
         :param dictionary: a dictionary representing an object of cls
         :return: an instance of cls with all attrs set from dictionary
         """
-        if cls is Rectangle:
-            instance = Square(0)
-        elif cls is Square:
-            instance = Rectangle(0, 0)
+        if cls.__name__ == "Rectangle":
+            instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            instance = cls(1)
         else:
-            instance = cls(0)
+            instance = cls(1)
 
         instance.update(**dictionary)
         return instance
