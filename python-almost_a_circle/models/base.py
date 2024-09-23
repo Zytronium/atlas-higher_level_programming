@@ -58,6 +58,14 @@ class Base:
         with open(f"{class_name}.json", "w") as file:
             file.write(cls.to_json_string(list_dicts))
 
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        creates & returns an instance with all attributes already set
+        :param dictionary: a dictionary representing an object of cls
+        :return: an instance of cls with all attrs set from dictionary
+        """
+
 
 if __name__ == '__main__':
     b = Base()
