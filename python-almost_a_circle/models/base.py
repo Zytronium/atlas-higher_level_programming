@@ -21,6 +21,18 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
+    def from_json_string(json_string):
+        """
+        gets the list of the JSON string representation json_string
+        (reverse of to_json_string)
+        :param json_string: a json string representation of a list of objects
+        :return: a list of dictionaries which the given json string represents
+        """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
+
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         gets the JSON string representation of a list of dictionaries.

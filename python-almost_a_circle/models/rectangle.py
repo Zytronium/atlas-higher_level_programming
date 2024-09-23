@@ -2,6 +2,8 @@
 """
 a module containing a rectangle class
 """
+import copy
+
 try:
     from models.base import Base
 except ModuleNotFoundError:
@@ -182,4 +184,10 @@ if __name__ == "__main__":
     print(r.id, r.width)
     r.update(id=5, width=12, hawiuhdiufha=53, height=10)
     print(r.id, r.width)
-    r.save_to_file([r])
+    rstr = r.to_json_string([r.to_dictionary()])
+    # r2 = Rectangle(12, 10, 0, 0, 4)
+    r2d2 = Rectangle.from_json_string(rstr)[0]
+    print(r.to_dictionary())
+    print(r2d2)
+    print(r.to_dictionary() == r2d2)
+
