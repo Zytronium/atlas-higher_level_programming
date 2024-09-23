@@ -3,6 +3,9 @@
 module containing the base class for all objects in this project
 """
 import json
+from models.rectangle import Rectangle
+from models.square import Square
+
 
 
 class Base:
@@ -61,20 +64,17 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
-        creates & returns an instance with all attributes already set
+        creates & returns an instance with all attributes already set.
+        Basically the inverse of to_dictionary().
         :param dictionary: a dictionary representing an object of cls
         :return: an instance of cls with all attrs set from dictionary
         """
+        if cls is Rectangle:
+            instance = Square(0)
+        elif cls is Square:
+            instance = Rectangle(0, 0)
+        else:
+            instance = cls(0)
 
-
-if __name__ == '__main__':
-    b = Base()
-    print(b.id)
-    b2 = Base()
-    print(b2.id)
-    b2.id = 3
-    print(b2.id)
-    b3 = Base()
-    print(b3.id)
-    b4 = Base(12)
-    print(b4.id)
+        instance.update(**dictionary)
+        return instance
