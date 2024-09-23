@@ -2,7 +2,6 @@
 """
 module containing the base class for all objects in this project
 """
-import json
 
 
 class Base:
@@ -40,7 +39,7 @@ class Base:
         """
         class_name = cls.__name__
         with open(f"{class_name}.json", "w") as file:
-            file.write(cls.to_json_string(list_objs))
+            file.write(Base.to_json_string(list_objs))
 
 
 if __name__ == '__main__':
