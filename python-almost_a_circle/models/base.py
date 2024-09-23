@@ -43,7 +43,7 @@ class Base:
             for obj in list_objs:
                 list_dicts.append(obj.to_dictionary())
         with open(f"{class_name}.json", "w") as file:
-            file.write(Base.to_json_string(list_dicts))
+            file.write(cls.to_json_string(list_dicts))
 
 
 if __name__ == '__main__':
