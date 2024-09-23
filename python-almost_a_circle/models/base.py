@@ -31,6 +31,17 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        writes the JSON string representation of list_objs to a file
+        :param list_objs: list of instances, which inherit the Base class,
+        which be written to a file
+        """
+        class_name = cls.__name__
+        with open(f"{class_name}.json", "w") as file:
+            file.write(cls.to_json_string(list_objs))
+
 
 if __name__ == '__main__':
     b = Base()
