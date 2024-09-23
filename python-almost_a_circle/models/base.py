@@ -2,6 +2,7 @@
 """
 module containing the base class for all objects in this project
 """
+import json
 
 
 class Base:
@@ -13,17 +14,21 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        # self.__initialIdGiven = False
         if id is not None:
-            # self.__initialIdGiven = True
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    # def __del__(self):
-    #     if not self.__initialIdGiven:
-    #         Base.__nb_objects -= 1
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        gets the JSON string representation of a list of dictionaries.
+        :return: the JSON string representation of the
+        given list of dictionaries.
+        """
+        return json.dumps(list_dictionaries)
+
 
 if __name__ == '__main__':
     b = Base()
