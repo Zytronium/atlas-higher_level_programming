@@ -2,6 +2,7 @@
 """
 module containing the base class for all objects in this project
 """
+import json
 
 
 class Base:
@@ -28,7 +29,7 @@ class Base:
         """
         if list_dictionaries is None:
             return "[]"
-        return repr(list_dictionaries)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
