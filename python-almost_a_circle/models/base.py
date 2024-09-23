@@ -39,7 +39,7 @@ class Base:
         """
         class_name = cls.__name__
         with open(f"{class_name}.json", "w") as file:
-            file.write(Base.to_json_string(list_objs))
+            file.write(list_objs.to_json_string())
 
 
 if __name__ == '__main__':
