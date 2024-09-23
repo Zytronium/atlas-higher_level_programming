@@ -38,8 +38,11 @@ class Base:
         which be written to a file
         """
         class_name = cls.__name__
+        list_dicts = []
+        for obj in list_objs:
+            list_dicts.append(obj.to_dictionary())
         with open(f"{class_name}.json", "w") as file:
-            file.write(Base.to_json_string(list_objs))
+            file.write(Base.to_json_string(list_dicts))
 
 
 if __name__ == '__main__':
