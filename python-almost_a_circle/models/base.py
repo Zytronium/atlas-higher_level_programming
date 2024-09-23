@@ -66,12 +66,10 @@ class Base:
         :param dictionary: a dictionary representing an object of cls
         :return: an instance of cls with all attrs set from dictionary
         """
-        if cls.__name__ == "Rectangle":
-            instance = cls(1, 1)
-        elif cls.__name__ == "Square":
-            instance = cls(1)
-        else:
-            instance = cls(1)
-
+        if cls.__name__ == "Rectangle":  # Rectangle
+            instance = cls(1, 1)  # width = 1, height = 1
+        else:  # Square (or Base, but it has no update() method)
+            instance = cls(1)  # size = 1 (square) or id = 1 (base)
+        # Note: used cls.name to avoid importing, which causes circular import
         instance.update(**dictionary)
         return instance
