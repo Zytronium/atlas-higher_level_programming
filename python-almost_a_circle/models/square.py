@@ -35,6 +35,13 @@ class Square(Rectangle):
         self.width = size
         self.height = size
 
+    def to_dictionary(self):
+        """
+        Creates a dictionary representation of the rectangle
+        :return: the dictionary representation of the rectangle
+        """
+        return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
+
     def update(self, *args, **kwargs):
         """
         updates the shape with specified args by assigning each given
