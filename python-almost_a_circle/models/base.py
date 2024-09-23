@@ -35,7 +35,7 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         :param list_objs: list of instances, which inherit the Base class,
-        which be written to a file
+        which will be written to a file
         """
         class_name = cls.__name__
         list_dicts = []
