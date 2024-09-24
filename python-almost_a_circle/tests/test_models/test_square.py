@@ -5,10 +5,23 @@ unittests for models/base
 
 
 import unittest
+from io import StringIO
+from unittest.mock import patch
 try:
     from models.square import Square
 except ModuleNotFoundError:
     from square import Square
+
+
+def get_output(func):
+    """
+    returns the output from stdout printed in func
+    :param func: function call which prints something to stdout
+    :return: what is printed when the given function runs
+    """
+    with patch('sys.stdout', new=StringIO()) as captured_output:
+        func()  # Call the function
+        return captured_output.getvalue()
 
 class SquareTestCase(unittest.TestCase):
     def test_0is_size(self):
@@ -121,16 +134,20 @@ class SquareTestCase(unittest.TestCase):
     def test9_display(self):
         expected_output = ("##\n"
                            "##\n")
-        self.assertEqual(Square(2, 0).display(), expected_output)
+        self.assertEqual(get_output(Square(2, 0).display), expected_output)
         expected_output = ("    ###\n"
                            "    ###\n"
                            "    ###\n")
-        self.assertEqual(Square(3, 4).display(), expected_output)
+        self.assertEqual(get_output(Square(3, 4).display), expected_output)
         expected_output = ("\n\n"
                            " ##\n"
                            " ##\n")
-        self.assertEqual(Square(2, 1, 2,  1).display(), expected_output)
+        self.assertEqual(get_output(Square(2, 1, 2,  1).display), expected_output)
 
+    def test9_1_area(self):
+        self.assertEqual(Square(3, 2, 1).area(), 9)
+        self.assertEqual(Square(10, 0, 2).area(), 100)
+        self.assertEqual(Square(1, 0, 0, 5).area(), 1)
 
 if __name__ == '__main__':
     unittest.main()

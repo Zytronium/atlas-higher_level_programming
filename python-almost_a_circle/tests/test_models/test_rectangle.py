@@ -1,6 +1,17 @@
 import unittest
+from io import StringIO
+from unittest.mock import patch
 from models.rectangle import Rectangle
 
+def get_output(func):
+    """
+    returns the output from stdout printed in func
+    :param func: function call which prints something to stdout
+    :return: what is printed when the given function runs
+    """
+    with patch('sys.stdout', new=StringIO()) as captured_output:
+        func()  # Call the function
+        return captured_output.getvalue()
 
 class MyTestCase(unittest.TestCase):
     def test0_general(self):
@@ -66,17 +77,24 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(repr(raised_error), repr(expected_error))
 
     def test2_display(self):
-        expected_output = "##"
-        self.assertEqual(Rectangle(2, 1).display(), expected_output)
+        expected_output = "##\n"
+        self.assertEqual(get_output(Rectangle(2, 1).display), expected_output)
         expected_output = ("###\n"
                            "###\n"
                            "###\n"
                            "###\n")
-        self.assertEqual(Rectangle(3, 4).display(), expected_output)
+        self.assertEqual(get_output(lambda: Rectangle(3, 4).display()), expected_output)  # the error occurs between here and the next line, on a line in unittestpy.py: "            output = sys.stdout.getvalue()"
         expected_output = ("\n"
-                           "  ###\n"
-                           "  ###\n")
-        self.assertEqual(Rectangle(4, 2, 2,  1).display(), expected_output)
+                           "  ####\n"
+                           "  ####\n")
+        self.assertEqual(get_output(Rectangle(4, 2, 2, 1).display), expected_output)
+
+    def test3_area(self):
+        self.assertEqual(Rectangle(2, 2, 1).area(), 4)
+        self.assertEqual(Rectangle(9, 1, 2).area(), 9)
+        self.assertEqual(Rectangle(3, 5).area(), 15)
+        self.assertEqual(Rectangle(1, 5, 0, 2).area(), 5)
+
 
 if __name__ == '__main__':
     unittest.main()
