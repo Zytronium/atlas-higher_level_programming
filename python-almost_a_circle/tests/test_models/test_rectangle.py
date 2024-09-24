@@ -117,7 +117,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(rstr, r2d2.to_json_string([r2d2.to_dictionary()]))
         self.assertEqual(r2d2.to_json_string(None), '[]')
 
-        Rectangle.save_to_file([])
+        self.assertEqual(Rectangle.save_to_file([]), None)
         try:
             with open("Rectangle.json", 'r') as f:
                 self.assertEqual('[]', f.read())
