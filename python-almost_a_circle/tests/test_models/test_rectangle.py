@@ -58,6 +58,15 @@ class MyTestCase(unittest.TestCase):
         finally:
             self.assertEqual(repr(raised_error), repr(expected_error))
 
+        expected_error = ValueError("height must be > 0")
+        raised_error = None
+        try:
+            Rectangle(2, 0, 1, 4)
+        except Exception as e:
+            raised_error = e
+        finally:
+            self.assertEqual(repr(raised_error), repr(expected_error))
+
         expected_error = TypeError("x must be an integer")
         raised_error = None
         try:
@@ -75,6 +84,8 @@ class MyTestCase(unittest.TestCase):
             raised_error = e
         finally:
             self.assertEqual(repr(raised_error), repr(expected_error))
+
+        self.assertEqual(str(Rectangle(11, 1, 1, 0, 4)), "[Rectangle] (4) 1 /0 - 11/1   )")
 
     def test2_display(self):
         expected_output = "##\n"
