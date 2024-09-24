@@ -64,17 +64,10 @@ class Base:
         creates a list of instances from a json file
         :return: a list of instances from a json file, which inherit Base
         """
-        # get the list of dicts from the file
         file_name = cls.__name__ + ".json"
-        list_dicts = []
-        list_objs = []
         with open(file_name, "r") as file:
-            list_dicts = cls.from_json_string(file.read())
-
-        # turn the list of dicts into a list of instances
-        for dictionary in list_dicts:
-            list_objs.append(cls.create(**dictionary))
-
+            list_objs = cls.create(**cls.from_json_string(file.read()))
+        return list_objs
 
     @classmethod
     def create(cls, **dictionary):
