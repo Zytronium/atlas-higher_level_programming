@@ -150,5 +150,33 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(Square(10, 0, 2).area(), 100)
         self.assertEqual(Square(1, 0, 0, 5).area(), 1)
 
+    def test9_2_json(self):
+        s = Square(1, 2, 3, 5)
+        Square.save_to_file([])
+        try:
+            with open("Square.json", 'r') as f:
+                self.assertEqual('[]', f.read())
+                self.assertEqual([], Square.load_from_file())
+        except FileNotFoundError:
+            self.fail("Square.json (first test) was not created or cannot be opened.")
+
+
+        s.save_to_file([s])
+        try:
+            with open("Square.json", 'r') as f:
+                self.assertEqual('[{"id": 5, "size": 1, "x": 2, "y": 3}]', f.read())
+        except FileNotFoundError:
+            self.fail("Square.json (second test) was not created or cannot be opened.")
+        self.assertEqual(str(Square.load_from_file()[0]), str(s))
+
+        Square.save_to_file(None)
+        try:
+            with open("Square.json", 'r') as f:
+                self.assertEqual('[]', f.read())
+                self.assertEqual([], Square.load_from_file())
+        except FileNotFoundError:
+            self.fail("Square.json (third test) was not created or cannot be opened.")
+
+
 if __name__ == '__main__':
     unittest.main()
