@@ -1,5 +1,6 @@
 import unittest
 from io import StringIO
+from telnetlib import theNULL
 from unittest.mock import patch
 from models.rectangle import Rectangle
 
@@ -116,6 +117,11 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(rstr, r2d2.to_json_string([r2d2.to_dictionary()]))
         self.assertEqual(r2d2.to_json_string(None), '[]')
         r2d2.save_to_file([r])
+        try:
+            with open("Rectangle.json", 'r') as f:
+                self.assertEqual('[{"id": 19, "width": 10, "height": 4, "x": 0, "y": 1}]', f.read())
+        except FileNotFoundError:
+            self.fail("Rectangle.json was not created or cannot be opened.")
         self.assertEqual(str(Rectangle.load_from_file()[0]), str(r2d2))
 
 
