@@ -84,6 +84,7 @@ class SquareTestCase(unittest.TestCase):
         raised_error = None
         try:
             square = Square(100, 0, 0)
+            square2 = Square(100, 2)
         except Exception as e:
             raised_error = e
         finally:
