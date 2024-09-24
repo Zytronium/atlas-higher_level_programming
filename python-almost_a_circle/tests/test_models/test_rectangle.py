@@ -20,6 +20,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(r.height, 2)
         r2d2 = Rectangle(1, 2)
         self.assertEqual(r.id + 1, r2d2.id)
+        self.assertEqual(r.to_dictionary(), {'id': r2d2.id - 1, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
 
     def test1_negative_or_0_or_not_int(self):
         expected_error = TypeError("width must be an integer")
