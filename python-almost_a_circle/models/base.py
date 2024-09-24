@@ -59,6 +59,24 @@ class Base:
             file.write(cls.to_json_string(list_dicts))
 
     @classmethod
+    def load_from_file(cls):
+        """
+        creates a list of instances from a json file
+        :return: a list of instances from a json file, which inherit Base
+        """
+        # get the list of dicts from the file
+        file_name = cls.__name__ + ".json"
+        list_dicts = []
+        list_objs = []
+        with open(file_name, "r") as file:
+            list_dicts = cls.from_json_string(file.read())
+
+        # turn the list of dicts into a list of instances
+        for dictionary in list_dicts:
+            list_objs.append(cls.create(**dictionary))
+
+
+    @classmethod
     def create(cls, **dictionary):
         """
         creates & returns an instance with all attributes already set.
