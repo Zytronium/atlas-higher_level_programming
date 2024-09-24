@@ -116,12 +116,22 @@ class MyTestCase(unittest.TestCase):
         r2d2 = Rectangle.create(**(Rectangle.from_json_string(rstr)[0]))
         self.assertEqual(rstr, r2d2.to_json_string([r2d2.to_dictionary()]))
         self.assertEqual(r2d2.to_json_string(None), '[]')
+
+        Rectangle.save_to_file([])
+        try:
+            with open("Rectangle.json", 'r') as f:
+                self.assertEqual('[]', f.read())
+                self.assertEqual([], Rectangle.load_from_file())
+        except FileNotFoundError:
+            self.fail("Rectangle.json (first test) was not created or cannot be opened.")
+
+
         r2d2.save_to_file([r])
         try:
             with open("Rectangle.json", 'r') as f:
                 self.assertEqual('[{"id": 19, "width": 10, "height": 4, "x": 0, "y": 1}]', f.read())
         except FileNotFoundError:
-            self.fail("Rectangle.json was not created or cannot be opened.")
+            self.fail("Rectangle.json (second test)     was not created or cannot be opened.")
         self.assertEqual(str(Rectangle.load_from_file()[0]), str(r2d2))
 
         Rectangle.save_to_file(None)
@@ -130,7 +140,7 @@ class MyTestCase(unittest.TestCase):
                 self.assertEqual('[]', f.read())
                 self.assertEqual([], Rectangle.load_from_file())
         except FileNotFoundError:
-            self.fail("Rectangle.json (second test) was not created or cannot be opened.")
+            self.fail("Rectangle.json (third test) was not created or cannot be opened.")
 
 
 
