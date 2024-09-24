@@ -151,7 +151,12 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(Square(1, 0, 0, 5).area(), 1)
 
     def test9_2_json(self):
+
         s = Square(1, 2, 3, 5)
+        sStr = s.to_json_string([s.to_dictionary()])
+        s2 = Square.create(**(Square.from_json_string(sStr)[0]))
+        self.assertEqual(sStr, s2.to_json_string([s2.to_dictionary()]))
+        self.assertEqual(s2.to_json_string(None), '[]')
         Square.save_to_file([])
         try:
             with open("Square.json", 'r') as f:
@@ -159,7 +164,6 @@ class SquareTestCase(unittest.TestCase):
                 self.assertEqual([], Square.load_from_file())
         except FileNotFoundError:
             self.fail("Square.json (first test) was not created or cannot be opened.")
-
 
         s.save_to_file([s])
         try:
