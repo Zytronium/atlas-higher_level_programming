@@ -124,6 +124,15 @@ class MyTestCase(unittest.TestCase):
             self.fail("Rectangle.json was not created or cannot be opened.")
         self.assertEqual(str(Rectangle.load_from_file()[0]), str(r2d2))
 
+        Rectangle.save_to_file(None)
+        try:
+            with open("Rectangle.json", 'r') as f:
+                self.assertEqual('[]', f.read())
+                self.assertEqual([], Rectangle.load_from_file())
+        except FileNotFoundError:
+            self.fail("Rectangle.json (second test) was not created or cannot be opened.")
+
+
 
 if __name__ == '__main__':
     unittest.main()
