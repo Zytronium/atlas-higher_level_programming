@@ -47,11 +47,18 @@ class BaseTestCase(unittest.TestCase):
         b2 = Base()
         self.assertEqual(b2.id, b.id)
 
-    def test6_to_json_string_empty(self):
+    def test6_to_json_string(self):
         b = Base()
         self.assertEqual(b.to_json_string(None), '[]')
         self.assertEqual(b.to_json_string([]), '[]')
-        self.assertEqual(b.to_json_string([{'id': 10}]), '[{"id": 10}]')
+        self.assertEqual(b.to_json_string([{'id': 10}, {'id':2}]), '[{"id": 10}, {"id": 2}]')
+
+    def test7_from_json_string(self):
+        b = Base()
+        self.assertEqual(b.from_json_string(None), [])
+        self.assertEqual(b.from_json_string("[]"), [])
+        self.assertEqual(b.from_json_string('[{"id": 10}]'), [{'id': 10}])
+        self.assertEqual(b.from_json_string('[{"id": 10}, {"id": 1}]'), [{'id': 10}, {'id': 1}])
 
 
 if __name__ == '__main__':
