@@ -78,7 +78,6 @@ class Base:
             list_objs.append(cls.create(**dictionary))
         return list_objs
 
-
     @classmethod
     def create(cls, **dictionary):
         """
