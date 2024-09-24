@@ -84,8 +84,9 @@ class MyTestCase(unittest.TestCase):
             raised_error = e
         finally:
             self.assertEqual(repr(raised_error), repr(expected_error))
-
-        self.assertEqual(str(Rectangle(11, 1, 1, 0, 4)), "[Rectangle] (4) 1/0 - 11/1   )")
+        r = Rectangle(11, 1, 1, 0, 4)
+        self.assertEqual(str(r), "[Rectangle] (4) 1/0 - 11/1")
+        # r.update(id=5, width=12, hawiuhdiufha=53, height=10)
 
     def test2_display(self):
         expected_output = "##\n"
