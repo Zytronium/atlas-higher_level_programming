@@ -66,10 +66,12 @@ class Base:
         """
         # get the list of dicts from the file
         file_name = cls.__name__ + ".json"
-        list_dicts = []
         list_objs = []
-        with open(file_name, "r") as file:
-            list_dicts = cls.from_json_string(file.read())
+        try:
+            with open(file_name, "r") as file:
+                list_dicts = cls.from_json_string(file.read())
+        except FileNotFoundError:
+            return []
 
         # turn the list of dicts into a list of instances
         for dictionary in list_dicts:
