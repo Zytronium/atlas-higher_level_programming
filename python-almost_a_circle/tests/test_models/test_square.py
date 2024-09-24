@@ -56,9 +56,10 @@ class SquareTestCase(unittest.TestCase):
         s = Square(10, 8, 3, 3)
         s.update(40, 6, 4, 2)
         self.assertEqual(str(s), "[Square] (40) 4/2 - 6")
+        self.assertEqual(s.to_dictionary(), {'id': 40, 'size': 6, 'x': 4, 'y': 2})
 
     def test_5update_kwargs(self):
-        s = Square(10, 8, 3, 3)
+        s = Square(10, 8    , 3, 3)
         s.update(size=6, id=35, x=4, width=50)
         # 'width' shouldn't update anything
         self.assertEqual(str(s), "[Square] (35) 4/3 - 6")
