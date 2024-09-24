@@ -158,12 +158,12 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(sStr, s2.to_json_string([s2.to_dictionary()]))
         self.assertEqual(s2.to_json_string(None), '[]')
         Square.save_to_file([])
-        try:
-            with open("Square.json", 'r') as f:
-                self.assertEqual('[]', f.read())
-                self.assertEqual([], Square.load_from_file())
-        except FileNotFoundError:
-            self.fail("Square.json (first test) was not created or cannot be opened.")
+        # try:
+        with open("Square.json", 'r') as f:
+            self.assertEqual('[]', f.read())
+            self.assertEqual([], Square.load_from_file())
+        # except FileNotFoundError:
+        #     self.fail("Square.json (first test) was not created or cannot be opened.")
 
         s.save_to_file([s])
         try:
