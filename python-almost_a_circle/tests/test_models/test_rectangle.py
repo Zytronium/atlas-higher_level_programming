@@ -111,19 +111,21 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(Rectangle(1, 5, 0, 2).area(), 5)
 
     def test4_json(self):
-        r = Rectangle(10, 4, 0, 1, 19)
-        rstr = r.to_json_string([r.to_dictionary()])
-        r2d2 = Rectangle.create(**(Rectangle.from_json_string(rstr)[0]))
-        self.assertEqual(rstr, r2d2.to_json_string([r2d2.to_dictionary()]))
-        self.assertEqual(r2d2.to_json_string(None), '[]')
-
         Rectangle.save_to_file([])
         try:
             with open("Rectangle.json", 'r') as f:
                 self.assertEqual('[]', f.read())
                 self.assertEqual([], Rectangle.load_from_file())
         except FileNotFoundError:
-            self.fail("Rectangle.json (first test) was not created or cannot be opened.")
+            self.fail(
+                "Rectangle.json (first test) was not created or cannot be opened.")
+
+    def test5_json(self):
+        r = Rectangle(10, 4, 0, 1, 19)
+        rstr = r.to_json_string([r.to_dictionary()])
+        r2d2 = Rectangle.create(**(Rectangle.from_json_string(rstr)[0]))
+        self.assertEqual(rstr, r2d2.to_json_string([r2d2.to_dictionary()]))
+        self.assertEqual(r2d2.to_json_string(None), '[]')
 
         r2d2.save_to_file([r])
         try:
