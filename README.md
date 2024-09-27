@@ -37,9 +37,16 @@ Projects are in chronological order, and are separated by courses, but not by sp
 - ### `OP1100`
   - **[Python - Everything is object]()** *Essay question is not in the repo
   - **[Python - Inheritance](python-inheritance)**
-  - ***[Python - Input/Output](python-input_output)***
-  - ***[Python - Almost a circle](python-almost_a_circle)***
+  - **[Python - Input/Output](python-input_output)**
+  - **[Python - Almost a circle](python-almost_a_circle)**
 - ### `WD1000`
+  - ### ***[AirBnB Clone - The console](https://github.com/Zytronium/atlas-AirBnB_clone)***
+  - *[Advanced HTML]()*
+  - *[Advanced CSS]()*
+  - *[AirBnB clone - Web static]()*
+  - *[SQL - Introduction]()*
+  - *[SQL - More queries]()*
+  - *[Python - Object-relational mapping]()*
 - ### `SA1000`
 - ### `WD1100`
 - ### `WD1200`
