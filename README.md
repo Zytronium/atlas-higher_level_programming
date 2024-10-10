@@ -43,9 +43,9 @@ Projects are in chronological order, and are separated by courses, but not by sp
 - ### `WD1000` | [Front-End Repo](https://github.com/Zytronium/atlas-web_front_end)
   - ### **[AirBnB Clone - The console](https://github.com/Zytronium/atlas-AirBnB_clone)**
   - **[Advanced HTML](https://github.com/Zytronium/atlas-web_front_end/tree/master/html_advanced)**
-    - ***[Advanced CSS]()***
-  - *[AirBnB clone - Web static]()*
-  - *[SQL - Introduction]()*
+    - **[Advanced CSS](https://github.com/Zytronium/atlas-web_front_end/tree/master/css_advanced)**
+  - ***[AirBnB clone - Web static]()***
+  - ***[SQL - Introduction](SQL_introduction)***
   - *[SQL - More queries]()*
   - *[Python - Object-relational mapping]()*
 - ### `SA1000`
