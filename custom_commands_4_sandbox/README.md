@@ -16,6 +16,15 @@ Linux command.
 prompt doesn't display the current path.
 - It's the only command here written in C instead of bash.
 
+## cpnxt
+- Copies the specified file and changes the copy's name to add 1 to the number at the beginning of the file name. (or sets the number to the value of the last parameter)
+- Usage: cpnxt <file path> <new number (optional)>
+  - parameter <file path>: The path or file name of the file to copy. The file name must start with a number followed by a '-'.
+  - parameter <new number>: (Optional parameter) Number to replace number at beginning of file name. Defaults to specified file's number + 1 if not specified.
+- Flags:
+  - `--help` basically just shows what's above: how to use the command.
+- Note: "cpnxt" is kind of hard to type fast, so it is recommended to set an alias. Perhaps `cn`
+
 ## gacp
 - Git add, commit, & push
 - If an argument is supplied, then that is the commit message.

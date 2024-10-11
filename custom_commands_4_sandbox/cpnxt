@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+from sys import argv
+from os import sep
+
+
+argc = len(argv)
+
+if argc == 1 or argv[1] == "":
+    print("cpnxt: please specify a file path. Usage: cpnxt <file path> <new number (optional)>")
+    exit(1)
+
+if argv[1] == "--help":
+    print("Copy the specified file and changes the copy's name to add 1 to the number at the beginning of the file name. (or sets the number to the value of the last parameter)\n"
+          "Usage: cpnxt <file path> <new number (optional)>\n\n"
+          "parameter <file path>: The path or file name of the file to copy. The file name must start with a number followed by a '-'.\n"
+          "parameter <new number>: (Optional parameter) Number to replace number at beginning of file name. Defaults to specified file's number + 1 if not specified.")
+    exit(0)
+
+file_name = argv[1].split(sep)[-1]
+if file_name == '' or argv[1][:-1] == sep:
+    print("cpnxt: file is a directory. Specified file must be a regular file.")
+    exit(1)
+if not file_name.split('-')[0].isdigit() or not argv[1].__contains__('-') or argv[1][0] == '-':
+    print("cpnxt: specified file does not begin with a number and a '-'")
+    exit(1)
+
+if argc == 3:
+    try:
+        new_num = int(argv[2])
+        if new_num < 0:
+            raise ValueError
+    except ValueError:
+        print("cpnxt: please specify a valid number or leave second parameter blank. Usage: cpnxt <file path> <new number (optional)>")
+        exit(1)
+
+file_num = int(file_name.split('-')[0])
+if argc < 3:
+    new_num = file_num + 1
+else:
+    new_num = int(argv[2])
+
+try:
+    with open(argv[1], 'r', encoding="utf-8") as f:
+        new_file_name = file_name.replace(str(file_num), str(new_num), 1)
+
+        last_index = argv[1].rfind(file_name)
+        new_file_path = argv[1][:last_index] + new_file_name + argv[1][last_index + len(file_name):]
+        try:
+            with open(new_file_path, 'r', encoding="utf-8") as f2:
+                print(f"cpnxt: {new_file_path} already exists.")
+                exit(1)
+        except FileNotFoundError:
+            pass
+
+        with open(new_file_path, 'w') as new_file:
+            new_file.write(f.read())
+except FileNotFoundError:
+    print("cpnxt: that file does not exist. Usage: cpnxt <file path> <new number (optional)>")
+    exit(1)
+print("file contents copied to " + new_file_path + ".")
