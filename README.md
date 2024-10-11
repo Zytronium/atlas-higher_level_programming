@@ -45,8 +45,8 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Advanced HTML](https://github.com/Zytronium/atlas-web_front_end/tree/master/html_advanced)**
   - **[Advanced CSS](https://github.com/Zytronium/atlas-web_front_end/tree/master/css_advanced)**
   - ***[AirBnB clone - Web static]()***
-  - ***[SQL - Introduction](SQL_introduction)***
-  - *[SQL - More queries]()*
+  - **[SQL - Introduction](SQL_introduction)**
+  - ***[SQL - More queries](SQL_more_queries)***
   - *[Python - Object-relational mapping]()*
 - ### `SA1000`
   - *[Docker]()*
