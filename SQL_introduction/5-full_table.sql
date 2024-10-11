@@ -1,3 +1,2 @@
 -- prints a description of the table first_table from the database hbtn_0c_0
-DESC first_table
-WHERE TABLE NAME CREATE TABLE
+asw,k.88uk,ij
