@@ -1,4 +1,5 @@
 -- lists the number of records with the same score in the table second_table of the database
-SELECT COUNT(UNIQUE score)
+SELECT COUNT(UNIQUE score) AS number
 FROM second_table
-ORDER BY score DESC; 
+GROUP BY score
+ORDER BY number DESC;
