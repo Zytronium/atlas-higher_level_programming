@@ -27,9 +27,9 @@ if __name__ == "__main__":
     i = 1
     for result in results:
         if i != len(results):
-            print(result, end=", ")
+            print(str(result), end=", ")
         else:
-            print(result)
+            print(str(result))
         i += 1
 
     csr.close()
