@@ -15,7 +15,8 @@ if __name__ == "__main__":
     d = MySQLdb.connect(host="localhost", user=un, passwd=pw, db=db, port=3306)
     csr = d.cursor()
     csr.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(st_nm))
+        "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
+            st_nm))
     results = csr.fetchall()
     for state in results:
         print(state)
