@@ -24,13 +24,7 @@ if __name__ == "__main__":
         """, (st_nm,)
     )
     results = csr.fetchall()
-    i = 1
-    for result in results:
-        if i != len(results):
-            print(str(result), end=", ")
-        else:
-            print(str(result))
-        i += 1
+    print(", ".join([city[0] for city in results]))
 
     csr.close()
     d.close()
