@@ -1,8 +1,8 @@
-    # Atlas Higher Level Programming - Atlas School Python projects.
+# Atlas Higher Level Programming - Atlas School Python projects.
 Lots of high level stuff, starting with Python.
 
 ---
-If you are reading this and are another student, and are here to copy and cheat, here's a good video I
+If you are another student reading this, and are here to copy and cheat, here's a good video I
 uploaded that you should watch: https://www.youtube.com/watch?v=pyoURHR-g4U ;-)
 
 ---
@@ -46,8 +46,8 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[Advanced CSS](https://github.com/Zytronium/atlas-web_front_end/tree/master/css_advanced)**
   - ***[AirBnB clone - Web static]()***
   - **[SQL - Introduction](SQL_introduction)**
-  - ***[SQL - More queries](SQL_more_queries)***
-  - *[Python - Object-relational mapping]()*
+  - **[SQL - More queries](SQL_more_queries)**
+  - ***[Python - Object-relational mapping](python-object_relational_mapping)***
 - ### `SA1000`
   - *[Docker]()*
   - *[AirBnB clone - MySQL]()*
