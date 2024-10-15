@@ -14,6 +14,5 @@ class State(Base):
     class representing a state, inheriting from Base
     """
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False,
-                unique=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
