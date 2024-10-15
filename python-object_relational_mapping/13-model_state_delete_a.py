@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module for task 13 - currently a copy of 12
+module for task 13
 """
 from sys import argv
 from sqlalchemy import create_engine
@@ -17,10 +17,10 @@ if __name__ == '__main__':
     engine = create_engine(f'mysql+mysqldb://{usrnm}:{pswrd}@{host}/{db_nm}',
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
-    state = Session().query(State).filter_by(id=2).first()
+    states = Session().query(State).filter(State.name.like('%a%')).all()
 
-    if state:
-        state.name = "New Mexico"
+    for state in states:
+        Session().delete(state)
 
     Session().commit()
     Session().close()
