@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """
 module for task 6
 """
@@ -9,6 +7,7 @@ from sqlalchemy.orm import declarative_base
 
 
 Base = declarative_base()
+
 
 class State(Base):
     """
