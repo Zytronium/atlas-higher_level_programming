@@ -17,7 +17,8 @@ if __name__ == '__main__':
     engine = create_engine(f'mysql+mysqldb://{usrnm}:{pswrd}@{host}/{db_nm}',
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
-    state = State(name='Louisiana', id=0)
+    state = State(name='Louisiana')
+    state.id = state.id
     Session().add(state)
     Session().commit()
     print(state.id)
