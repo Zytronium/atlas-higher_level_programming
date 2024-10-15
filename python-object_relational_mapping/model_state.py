@@ -3,7 +3,7 @@
 module for task 6
 """
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
@@ -21,7 +21,7 @@ class State(Base):
     # print(test_val)
 
 if __name__ == '__main__':
-    testState = State(name="Oklahoma", id=2)
+    testState = State(name="Oklahoma")
     print(testState.id)
     print(testState.name)
-    print(testState.test_val)
+    # print(testState.test_val)
