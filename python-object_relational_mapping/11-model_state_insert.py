@@ -16,7 +16,6 @@ if __name__ == '__main__':
 
     engine = create_engine(f'mysql+mysqldb://{usrnm}:{pswrd}@{host}/{db_nm}',
                            pool_pre_ping=True)
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     state = State(name='Louisiana')
     Session().add(state)
