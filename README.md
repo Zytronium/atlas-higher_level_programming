@@ -47,14 +47,14 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - ***[AirBnB clone - Web static]()***
   - **[SQL - Introduction](SQL_introduction)**
   - **[SQL - More queries](SQL_more_queries)**
-  - ***[Python - Object-relational mapping](python-object_relational_mapping)***
+  - **[Python - Object-relational mapping](python-object_relational_mapping)**
 - ### `SA1000`
-  - *[Docker]()*
-  - *[AirBnB clone - MySQL]()*
+  - **[Docker](https://github.com/Zytronium/atlas-softy-pinko-docker)**
+  - ### **[AirBnB clone - MySQL](https://github.com/internashionalist/atlas-AirBnB_clone_v2/tree/6e565fd902f69565574f5df2e89002e4e3181bcb)**
 - ### `WD1100`
-  - ### *[AirBnB clone - Web Framework]()*
-  - *[API]()*
-  - *[AirBnB clone - RESTful API]()*
+  - ### **[AirBnB clone - Web Framework](https://github.com/Zytronium/atlas-AirBnB_clone_v2/tree/main/web_flask)**
+  - **[API](https://github.com/Zytronium/atlas-back-end/tree/master/api)**
+  - ### ***[AirBnB clone - RESTful API](https://github.com/MBall0u/atlas-AirBnB_clone_v3)***
 - ### `WD1200`
   - *[JavaScript - Warm up]()*
   - *[JavaScript - Objects, Scopes and Closures]()*
