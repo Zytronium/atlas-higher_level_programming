@@ -1,7 +1,7 @@
 # Custom Commands
 
 ---
-This directory cotains executable files  that I made to help in the terminal.
+This directory contains executable files  that I made to help in the terminal.
 I copied them here so that I can use them in the sandbox. To use these commands,
 copy or move them to `/bin`. Then, you can use them the same way as any other
 Linux command. 
@@ -28,7 +28,7 @@ prompt doesn't display the current path.
 ## gacp
 - Git add, commit, & push
 - If an argument is supplied, then that is the commit message.
-- The commit message should be in quotes if its more than 1 word.
+- The commit message should be in quotes if it's more than 1 word.
 - If no args are given, it commits with the message "commit msg"
 
 ## newjs
