@@ -31,10 +31,18 @@ prompt doesn't display the current path.
 - The commit message should be in quotes if its more than 1 word.
 - If no args are given, it commits with the message "commit msg"
 
-## newpy
-- Creates a new executable python script with a shebang in it.
-- The fist given argument is the name of the new python file. 
+## newjs
+- Creates a new executable JavaScript node.js script with a shebang in it.
+- The fist given argument is the name of the new JavaScript file.
 - If a file with the given name already exists, it won't create or overwrite anything.
+
+## newpy
+- Creates a new executable Python script with a shebang in it.
+- The fist given argument is the name of the new Python file. 
+- If a file with the given name already exists, it won't create or overwrite anything.
+
+## xjs
+- Adds execute permissions to all files in current directory ending in '.js'
 
 ## xpy
 - Adds execute permissions to all files in current directory ending in '.py'
