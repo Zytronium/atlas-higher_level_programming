@@ -1,10 +1,9 @@
 #!/usr/bin/node
-
 console.log((() => {
     switch (process.argv.length) {
         // length is always >= 2 because index 0 & 1 are given automatically.
         case 2:
-            return 'No arguments';
+            return 'No argument';
 
         case 3:
             return 'Argument found';
@@ -12,4 +11,4 @@ console.log((() => {
         default:
             return 'Arguments found';
     }
-})())
+})());
