@@ -1,9 +1,16 @@
 # Atlas Higher Level Programming - Atlas School Python projects.
-Lots of high level stuff, starting with Python.
+Lots of high level stuff, mostly using Python. Primary repo for T2 at Atlas School.
+
+Starting with the basics of python, this repository covers many higher level
+concepts, including high level programming languages (like Python),
+object-oriented programming (OOP), databases, docker, and web development. The
+larger projects in this trimester are all parts of a single project: AirBnB
+Clone. Some projects in this trimester are not in this repository, but are still
+linked below.
 
 ---
-If you are another student reading this, and are here to copy and cheat, here's a good video I
-uploaded that you should watch: https://www.youtube.com/watch?v=pyoURHR-g4U ;-)
+If you are another student reading this, and are here to copy and cheat, here's
+a good video I uploaded that you should watch: https://www.youtube.com/watch?v=pyoURHR-g4U ; )
 
 ---
 <details>
@@ -54,16 +61,16 @@ Projects are in chronological order, and are separated by courses, but not by sp
 - ### `WD1100`
   - ### **[AirBnB clone - Web Framework](https://github.com/Zytronium/atlas-AirBnB_clone_v2/tree/main/web_flask)**
   - **[API](https://github.com/Zytronium/atlas-back-end/tree/master/api)**
-  - ### ***[AirBnB clone - RESTful API](https://github.com/MBall0u/atlas-AirBnB_clone_v3)***
+  - ### **[AirBnB clone - RESTful API](https://github.com/MBall0u/atlas-AirBnB_clone_v3)**
 - ### `WD1200`
-  - *[JavaScript - Warm up]()*
+  - *[JavaScript - Warm up](javascript-warm_up)*
   - *[JavaScript - Objects, Scopes and Closures]()*
   - *[JavaScript - Web scraping]()*
   - *[JavaScript - Web jQuery]()*
   - *[AirBnB clone - Web dynamic]()*
   - ### *[Hack Sprint]()*
   - #### *[Hack Sprint Presentation]()*
-  - ### *[Hack Sprint - Development Retrospective]()*
+  - #### *[Hack Sprint - Development Retrospective]()*
 
 ---
 #### [Click Here For Atlas Low Level Programming C Projects](https://github.com/Zytronium/atlas-low_level_programming/tree/main?tab=readme-ov-file#atlas-low-level-programming---atlas-school-c-projects)
