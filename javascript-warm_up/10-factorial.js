@@ -7,6 +7,6 @@ function calculateFactorial (n) {
   return factorial;
 }
 
-const number = process.argv[2]; let factorial = 1;
+const number = parseInt(process.argv[2], 10); let factorial = 1;
 
 console.log(calculateFactorial(number));
