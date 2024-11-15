@@ -2,10 +2,6 @@
 const Square5 = require('./5-square');
 
 class Square extends Square5 {
-  constructor (size) {
-    super(size);
-  }
-
   // prints the rectangle using the given char
   charPrint (c = 'X') {
     let line = '';
