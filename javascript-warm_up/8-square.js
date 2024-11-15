@@ -16,4 +16,3 @@ if (isNaN(size)) { // If size is not a number, print this
     size--;
   }
 }
-// I dont have dementia
