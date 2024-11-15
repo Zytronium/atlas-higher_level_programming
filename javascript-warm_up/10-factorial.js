@@ -1,9 +1,12 @@
 #!/usr/bin/node
-let number = process.argv[2], factorial = 1;
-
-while (number > 0) {
-  factorial *= number;
-  number--;
+function calculateFactorial (n) {
+  while (n > 0) {
+    factorial *= n;
+    n--;
+  }
+  return factorial;
 }
 
-console.log(factorial);
+const number = process.argv[2]; let factorial = 1;
+
+console.log(calculateFactorial(number));
