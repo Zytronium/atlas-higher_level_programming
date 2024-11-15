@@ -9,7 +9,7 @@ class Rectangle {
     this.height = h;
   }
 
-  print() {
+  print () {
     let line = '';
 
     // build the string top line; which is `width` X's
