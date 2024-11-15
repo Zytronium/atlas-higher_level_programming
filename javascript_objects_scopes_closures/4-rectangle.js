@@ -26,15 +26,15 @@ class Rectangle {
 
   // rotates the rectangle 90 degrees by swapping width and height
   rotate () {
-    const ogHeight = this.height
+    const ogHeight = this.height;
     this.height = this.width;
     this.width = ogHeight;
   }
 
   // doubles the rectangle's width and height
   double () {
-    this.width *= 2
-    this.height *= 2
+    this.width *= 2;
+    this.height *= 2;
   }
 }
 
