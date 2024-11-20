@@ -63,8 +63,8 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[API](https://github.com/Zytronium/atlas-back-end/tree/master/api)**
   - ### **[AirBnB clone - RESTful API](https://github.com/MBall0u/atlas-AirBnB_clone_v3)**
 - ### `WD1200`
-  - *[JavaScript - Warm up](javascript-warm_up)*
-  - *[JavaScript - Objects, Scopes and Closures]()*
+  - **[JavaScript - Warm up](javascript-warm_up)**
+  - **[JavaScript - Objects, Scopes and Closures](javascript_objects_scopes_closures)**
   - *[JavaScript - Web scraping]()*
   - *[JavaScript - Web jQuery]()*
   - *[AirBnB clone - Web dynamic]()*
