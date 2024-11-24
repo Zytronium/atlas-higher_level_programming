@@ -7,12 +7,14 @@ request.get(apiUrl, (err, response, body) => {
     console.error(err);
   } else {
       const tasks = JSON.parse(body);
-      const completedTasks = tasks.forEach(task => {
+      const completedTasks = {}
+
+      tasks.forEach(task => {
           if (task.completed) {
-              if (!this[task.userId]) {
-                  this[task.userId] = 0;
+              if (!completedTasks[task.userId]) {
+                  completedTasks[task.userId] = 0;
               }
-              this[task.userId]++;
+              completedTasks[task.userId]++;
           }
       });
       console.log(completedTasks);
