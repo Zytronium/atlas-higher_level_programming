@@ -1,8 +1,8 @@
 # JavaScript - Web jQuery
 
 ---
-###### Project Readme Template
 This project is all about jQuery.
 
-###### Description and example of concepts in this project 
-
+This project focuses on practicing hwo to alter the content on an HTML page
+using a JavaScript script, and how to use that and APIs to load and display
+information from those APIs on your web page.
