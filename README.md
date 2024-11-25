@@ -66,7 +66,7 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[JavaScript - Warm up](javascript-warm_up)**
   - **[JavaScript - Objects, Scopes and Closures](javascript_objects_scopes_closures)**
   - **[JavaScript - Web scraping](javascript-web_scraping)**
-  - ***[JavaScript - Web jQuery](javascript-web_jquery)***
+  - **[JavaScript - Web jQuery](javascript-web_jquery)**
   - ### *[AirBnB clone - Web dynamic]()*
   - ## *[Hack Sprint]()*
   - *[Hack Sprint Presentation]()*
