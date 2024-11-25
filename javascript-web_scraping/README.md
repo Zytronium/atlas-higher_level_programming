@@ -1,7 +1,9 @@
 # JavaScript - Web scraping
 
 ---
-###### Project Readme Template
 This project is all about JavaScript web scrapping.
 
-###### Description and example of concepts in this project 
+Web scrapping is basically sending a request to a website and pulling data from
+it. This can be via an API, or (to my knowledge) just data form a regular website.
+Web scrapping should only be done if the website allows it, or you have permission.
+Otherwise, it may be illegal. (Or so I'm told. I'm no legal expert)

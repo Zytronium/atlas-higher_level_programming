@@ -65,12 +65,12 @@ Projects are in chronological order, and are separated by courses, but not by sp
 - ### `WD1200`
   - **[JavaScript - Warm up](javascript-warm_up)**
   - **[JavaScript - Objects, Scopes and Closures](javascript_objects_scopes_closures)**
-  - *[JavaScript - Web scraping](javascript-web_scraping)*
-  - *[JavaScript - Web jQuery]()*
-  - *[AirBnB clone - Web dynamic]()*
-  - ### *[Hack Sprint]()*
-  - #### *[Hack Sprint Presentation]()*
-  - #### *[Hack Sprint - Development Retrospective]()*
+  - **[JavaScript - Web scraping](javascript-web_scraping)**
+  - ***[JavaScript - Web jQuery](javascript-web_jquery)***
+  - ### *[AirBnB clone - Web dynamic]()*
+  - ## *[Hack Sprint]()*
+  - *[Hack Sprint Presentation]()*
+  - *[Hack Sprint - Development Retrospective]()*
 
 ---
 #### [Click Here For Atlas Low Level Programming C Projects](https://github.com/Zytronium/atlas-low_level_programming/tree/main?tab=readme-ov-file#atlas-low-level-programming---atlas-school-c-projects)
