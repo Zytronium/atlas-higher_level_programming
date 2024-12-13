@@ -4,9 +4,9 @@ Lots of high level stuff, mostly using Python. Primary repo for T2 at Atlas Scho
 Starting with the basics of python, this repository covers many higher level
 concepts, including high level programming languages (like Python),
 object-oriented programming (OOP), databases, docker, and web development. The
-larger projects in this trimester are all parts of a single project: AirBnB
-Clone. Some projects in this trimester are not in this repository, but are still
-linked below.
+larger projects in this trimester, except teh Hack Sprint, are all parts of a
+single project: AirBnB Clone. Some projects in this trimester are not in this
+repository, but are still linked below.
 
 ---
 If you are another student reading this, and are here to copy and cheat, here's
@@ -68,9 +68,9 @@ Projects are in chronological order, and are separated by courses, but not by sp
   - **[JavaScript - Web scraping](javascript-web_scraping)**
   - **[JavaScript - Web jQuery](javascript-web_jquery)**
   - ### **[AirBnB clone - Web dynamic](https://github.com/Zytronium/atlas-AirBnB_clone_v4)**
-  - ## ***[Hack Sprint](https://github.com/Zytronium/atlas-hack_sprint_adventure)***
-  - ***[Hack Sprint Presentation]()***
-  - *[Hack Sprint - Development Retrospective]()*
+  - ## **[Hack Sprint](https://github.com/Zytronium/atlas-hack_sprint_adventure)**
+  - **[Hack Sprint Presentation]()** (No link)
+  - **[Hack Sprint - Development Retrospective]()** (No link)
 
 ---
 #### [Click Here For Atlas Low Level Programming C Projects](https://github.com/Zytronium/atlas-low_level_programming/tree/main?tab=readme-ov-file#atlas-low-level-programming---atlas-school-c-projects)
